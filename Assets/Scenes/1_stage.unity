@@ -3297,6 +3297,41 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8874068375097923935, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874068375097923935, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.009433985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874068375097923935, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.009433985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874068375097923935, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.009433985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874068375097923935, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: far clip plane
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890118636020606603, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: far clip plane
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890118637998536977, guid: 7601e1beea2844804bc5667408965692,
+        type: 3}
+      propertyPath: far clip plane
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7601e1beea2844804bc5667408965692, type: 3}
 --- !u!4 &498748470 stripped
@@ -16084,22 +16119,22 @@ PrefabInstance:
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
@@ -16139,12 +16174,12 @@ PrefabInstance:
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1288
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 794
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
@@ -16176,11 +16211,31 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073171235254494513, guid: 65536badfb5e249e18b6fbf2895e399d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8073171235254494512, guid: 65536badfb5e249e18b6fbf2895e399d,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 498748472}
+    - target: {fileID: 8073171235254494512, guid: 65536badfb5e249e18b6fbf2895e399d,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65536badfb5e249e18b6fbf2895e399d, type: 3}
 --- !u!1001 &6314424760343959186
