@@ -11462,7 +11462,7 @@ MonoBehaviour:
   OVRDebugConsoleObject: {fileID: 1030302487}
   OVRDebugConsoleOutputObject: {fileID: 779997271}
   debugControllerScript: {fileID: 84438839}
-  testPlay: 0
+  testPlay: 1
 --- !u!4 &2111689422
 Transform:
   m_ObjectHideFlags: 0

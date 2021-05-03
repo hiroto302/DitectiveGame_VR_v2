@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.XR;
 
 // XRの設定
@@ -14,5 +15,18 @@ public class XRSetting : MonoBehaviour
         XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale);
         // 解像度の変更
         XRSettings.eyeTextureResolutionScale = renderScale;
+
+        // リフレッシュレートを確認・設定
+        if (OVRManager.display.displayFrequenciesAvailable.Contains(72f))
+        {
+            OVRManager.display.displayFrequency = 72f;
+            Debug.Log(OVRManager.display.displayFrequency + " : リフレッシュレート");
+        }
+
+        float[] freqs = OVRManager.display.displayFrequenciesAvailable;
+        foreach(var freq in freqs )
+        {
+            Debug.Log(freq + " : freq");
+        }
     }
 }
