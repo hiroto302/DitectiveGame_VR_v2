@@ -27,7 +27,7 @@ public class DoorHandle : MonoBehaviour
     [SerializeField]
     protected Transform door = null;
     // Handelに触れているか判定
-    bool touch = false;
+    bool hasTouched = false;
     // Handのタグ名
     const string HandTag = "Hand";
 
@@ -55,7 +55,7 @@ public class DoorHandle : MonoBehaviour
     {
         if(other.gameObject.CompareTag(HandTag))
         {
-            touch = true;
+            hasTouched = true;
         }
     }
 
@@ -74,13 +74,13 @@ public class DoorHandle : MonoBehaviour
     {
         if(other.gameObject.CompareTag(HandTag))
         {
-            touch = false;
+            hasTouched = false;
         }
     }
 
     void Update()
     {
-        if(touch)
+        if(hasTouched)
         {
             // 対辺の取得 handPointのローカル座標から取得
             dz = handPointTransform.localPosition.z - handPointScript.InitialPosition.z;
