@@ -39,6 +39,10 @@ public class ScaleDoorController : MonoBehaviour
     // Handのタグ名
     const string HandTag = "Hand";
 
+    // 扉が閉じられ固定させた時に発生する event
+    public delegate void ChangeState();
+    public static event ChangeState onFixedStateChange;
+
     void Reset()
     {
         chaliceScale = transform.root.gameObject.GetComponentInChildren<ChaliceScale>();
@@ -103,6 +107,8 @@ public class ScaleDoorController : MonoBehaviour
             }
             // ライトをoffにする
             blinkLightScript.LightSetActive(false);
+            // Scaleのドアが閉まるevent発生
+            onFixedStateChange();
         }
     }
 }
