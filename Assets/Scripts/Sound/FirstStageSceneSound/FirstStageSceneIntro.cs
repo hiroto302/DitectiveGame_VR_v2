@@ -120,7 +120,7 @@ public class FirstStageSceneIntro : MonoBehaviour
                     // fadeIn終了したあと
                     // 猫トーク開始
                     se.PlaySE(seNum, cat.position, 0.3f);
-                    catTalkController.FirstContactTalk();
+                    catTalkController.StartFirstContactTalk();
                     seNum ++;
                 }
                 break;
@@ -130,5 +130,4 @@ public class FirstStageSceneIntro : MonoBehaviour
                 break;
         }
     }
-
 }

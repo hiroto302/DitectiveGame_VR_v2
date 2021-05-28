@@ -29,7 +29,7 @@ public class CatTalkController_1Stage : CatTalkController
 
     // 各talkをスタートするメソッド
     // 冒頭の会話開始
-    public void FirstContactTalk()
+    public void StartFirstContactTalk()
     {
         firstContact = true;
         currentMessage[0] = true;
