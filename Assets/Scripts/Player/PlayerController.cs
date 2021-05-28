@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 // Playerのスクリプト
 // オキュラスクエスト用 transform.TranslateによるPlayerの移動方法
@@ -17,6 +18,10 @@ public class PlayerController : MonoBehaviour
     }
     // Playerの現在の状態
     public State currentState;
+
+    // Playerの状態が変わった時に発生する event
+    public event Action<State> onStateUpdate;
+
     // Playerの移動に関する変数群
     private float angleSpeed = 30.0f;
     private float moveSpeed = 1.35f;
@@ -128,11 +133,15 @@ public class PlayerController : MonoBehaviour
         {
             // Talk状態の時、非表示
             ShowPointingDirection(false);
+            if(onStateUpdate != null)
+                onStateUpdate(currentState);
         }
         else if(state == State.Talk)
         {
             // Talk状態の時、表示
             ShowPointingDirection(true);
+            if(onStateUpdate != null)
+                onStateUpdate(currentState);
         }
     }
 
