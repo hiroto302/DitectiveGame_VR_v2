@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 // イントロの操作このクラスで行う
 public class FirstStageSceneIntro : MonoBehaviour
 {
-    // Intro
-    bool intro = false;
+    // Introの場面であるか
+    bool isIntro = false;
     // 経過時間
     float elapsedTime = 0;
     // SE
@@ -51,77 +51,84 @@ public class FirstStageSceneIntro : MonoBehaviour
         if(scene.name == "1_stage")
         {
             playerController.SetState(PlayerController.State.Talk);
-            intro = true;
+            // intro = true;
+            isIntro = true;
         }
     }
 
     void Update()
     {
-        if(intro)
+        if(isIntro)
         {
-            elapsedTime += Time.deltaTime;
-            switch(seNum)
-            {
-                case 0:
-                    if(elapsedTime > 1.0f)
-                    {
-                        // 扉開く音
-                        se.PlaySE(seNum, player.position, 0.3f);
-                        seNum ++;
-                        elapsedTime = 0;
-                    }
-                    break;
-                case 1:
-                    if(elapsedTime > 1.0f)
-                    {
-                        // 扉が閉じる音
-                        se.PlaySE(seNum, player.position, 0.3f);
-                        seNum ++;
-                        elapsedTime = 0;
-                    }
-                    break;
-                case 2:
-                    if(elapsedTime > 1.0f)
-                    {
-                        // 扉がロックされる音
-                        se.PlaySE(seNum, player.position, 0.3f);
-                        seNum ++;
-                        elapsedTime = 0;
-                    }
-                    break;
-                case 3:
-                    if(elapsedTime > 1.0f)
-                    {
-                        if(stepNum < 4)
-                        {
-                            // 足音
-                            se.PlaySE(seNum, playerFoot.position, 0.3f);
-                            stepNum ++;
-                        }
-                        else
-                        {
-                            // fadeIn開始
-                            playerPanelController.FadeInStart();
-                            seNum ++;
-                        }
-                        elapsedTime = 0;
-                    }
-                    break;
-                case 4:
-                    if(elapsedTime > 3.0f)
-                    {
-                        // fadeIn終了したあと
-                        // 猫トーク開始
-                        se.PlaySE(seNum, cat.position, 0.3f);
-                        catTalkController.FirstContactTalk();
-                        seNum ++;
-                    }
-                    break;
-                case 5:
-                    // intro終了
-                    intro = false;
-                    break;
-            }
+            StartIntro();
         }
     }
+
+    void StartIntro()
+    {
+        elapsedTime += Time.deltaTime;
+        switch(seNum)
+        {
+            case 0:
+                if(elapsedTime > 1.0f)
+                {
+                    // 扉開く音
+                    se.PlaySE(seNum, player.position, 0.3f);
+                    seNum ++;
+                    elapsedTime = 0;
+                }
+                break;
+            case 1:
+                if(elapsedTime > 1.0f)
+                {
+                    // 扉が閉じる音
+                    se.PlaySE(seNum, player.position, 0.3f);
+                    seNum ++;
+                    elapsedTime = 0;
+                }
+                break;
+            case 2:
+                if(elapsedTime > 1.0f)
+                {
+                    // 扉がロックされる音
+                    se.PlaySE(seNum, player.position, 0.3f);
+                    seNum ++;
+                    elapsedTime = 0;
+                }
+                break;
+            case 3:
+                if(elapsedTime > 1.0f)
+                {
+                    if(stepNum < 4)
+                    {
+                        // 足音
+                        se.PlaySE(seNum, playerFoot.position, 0.3f);
+                        stepNum ++;
+                    }
+                    else
+                    {
+                        // fadeIn開始
+                        playerPanelController.FadeInStart();
+                        seNum ++;
+                    }
+                    elapsedTime = 0;
+                }
+                break;
+            case 4:
+                if(elapsedTime > 3.0f)
+                {
+                    // fadeIn終了したあと
+                    // 猫トーク開始
+                    se.PlaySE(seNum, cat.position, 0.3f);
+                    catTalkController.FirstContactTalk();
+                    seNum ++;
+                }
+                break;
+            case 5:
+                // intro終了
+                isIntro = false;
+                break;
+        }
+    }
+
 }
