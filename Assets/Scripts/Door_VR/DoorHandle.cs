@@ -100,8 +100,6 @@ namespace VR
                 // オイラー角をラジアンに変換
                 deg = rad * Mathf.Rad2Deg;
                 // 手の位置により変化したdzにより、degを算出し、それにより生まれた角度分移動
-                // Vector3.Up (中心軸の軸の変数によって合わせる)
-                // door.RotateAround( centerPoint.position, Vector3.up, deg);
                 door.RotateAround( centerPoint.position, rotationAxis, deg);
                 // 移動させた後、HandPointをリセットする
                 handPointTransform.localPosition = handPointScript.InitialPosition;
