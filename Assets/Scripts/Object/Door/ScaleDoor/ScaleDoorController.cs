@@ -41,7 +41,7 @@ public class ScaleDoorController : MonoBehaviour
 
     // 扉が閉じられ固定させた時に発生する event
     public delegate void ChangeState();
-    public static event ChangeState onFixedStateChange;
+    public static event ChangeState OnFixedStateChange;
 
     void Reset()
     {
@@ -107,8 +107,11 @@ public class ScaleDoorController : MonoBehaviour
             }
             // ライトをoffにする
             blinkLightScript.LightSetActive(false);
-            // Scaleのドアが閉まるevent発生
-            onFixedStateChange();
+            if(OnFixedStateChange != null)
+            {
+                // Scaleのドアが閉まるevent発生
+                OnFixedStateChange();
+            }
         }
     }
 }

@@ -32,7 +32,7 @@ namespace VR
         void Start()
         {
             // event 追加
-            ScaleDoorController.onFixedStateChange += HandleFixedStateChange;
+            ScaleDoorController.OnFixedStateChange += HandleFixedStateChange;
         }
 
 
@@ -92,6 +92,8 @@ namespace VR
             }
             // 扉を開閉可能な状態に変更
             UnLockDoor();
+            // 追加したeventを削除
+            ScaleDoorController.OnFixedStateChange -= HandleFixedStateChange;
         }
     }
 }
