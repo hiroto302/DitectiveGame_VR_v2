@@ -10919,7 +10919,7 @@ MonoBehaviour:
   OVRDebugConsoleObject: {fileID: 1030302487}
   OVRDebugConsoleOutputObject: {fileID: 779997271}
   debugControllerScript: {fileID: 8874068376421103190}
-  testPlay: 1
+  testPlay: 0
 --- !u!4 &2111689422
 Transform:
   m_ObjectHideFlags: 0
@@ -11485,6 +11485,26 @@ PrefabInstance:
     - target: {fileID: 4765350785697624519, guid: ab0df08c9230f45d789f35cb9268de8f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838698691731170570, guid: ab0df08c9230f45d789f35cb9268de8f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838698691731170570, guid: ab0df08c9230f45d789f35cb9268de8f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976213953893761185, guid: ab0df08c9230f45d789f35cb9268de8f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6976213953893761185, guid: ab0df08c9230f45d789f35cb9268de8f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
