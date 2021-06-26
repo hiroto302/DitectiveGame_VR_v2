@@ -79,7 +79,8 @@ public class ChaliceScale : MonoBehaviour
         if(other.gameObject.CompareTag(ChaliceTag))
         {
             // 聖杯を置いた時、重さが増加
-            if(OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) == 0 && intoChaliceScale == true)
+            if((OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) == 0 && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) == 0 && intoChaliceScale == true))
+                // || (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) == 1 && OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger) == 0 && intoChaliceScale == true))
             {
                 totalWeight = GetTotalWeight();
 
